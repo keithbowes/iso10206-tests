@@ -10,5 +10,7 @@ end;
 
 begin
   lend:
+  begin
     Halt(2);
-  end.
+  end;
+end.

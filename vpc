@@ -1,0 +1,36 @@
+#! /bin/sh
+# vi: et:sts=4:sw=4:ts=4
+
+# Run the tests with Vector Pascal
+rm -fr vpc-build
+mkdir vpc-build
+cd vpc-build
+
+vpc=$(which vpc)
+export mmpcdir=$(dirname $vpc)/$(dirname `readlink $vpc`)
+
+# mods.int.pas has to be compiled before mods.imp.pas for mods.imp.pas to successfully compile
+for f in ../*.pas;
+do
+    out=`echo $f | sed -e 's/^..\/\(.\+\)\.pas$/\1/g'`
+    vpc $f
+    if test "$?" == "0";
+    then
+        echo "$f" >> success
+    else
+        # If it was a module or unit, linking will have failed
+        # Let's try again without linking
+        vpc $f -nolink
+        if test "$?" == "0";
+        then
+            echo "$f" >> success
+        else
+            echo "$f" >> failure
+        fi
+    fi
+
+    # Move the executable to the build directory
+    mv ../$out .
+    # Remove the crazy number of temp files generated
+    rm -f ../*.lis ../*.lst ../listing.txt ../p.asm
+done

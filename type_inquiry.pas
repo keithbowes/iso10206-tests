@@ -1,5 +1,7 @@
 program Type_Inquiry;
 
+{ I originally had b as a second parameter, but GPC failed, saying that a is undefined.
+  Though, reading the standard, it seems that that should be allowed. }
 procedure p(a: integer);
 var
   b: type of a;
