@@ -1,0 +1,28 @@
+#! /bin/sh
+# vi: et:sts=4:sw=4:ts=4
+
+# Run the tests with FPC
+rm -fr fpc-build
+mkdir fpc-build
+cd fpc-build
+
+for f in ../*.pas;
+do
+    # Try with different versions and modes until something works
+    # *nix only at the moment
+    for fpc in /usr/lib/fpc/*/ppc*;
+    do
+        for mode in fpc extendedpascal iso;
+        do
+            $fpc -FE. -FU. -M$mode $f
+            if test "$?" == "0";
+            then
+                version=`echo $fpc | grep -Po '\d+\.\d+\.\d+'`
+                echo "$f ($version, $mode)" >> success
+                break 2;
+            fi
+        done
+    done
+
+    echo "$f" >> failure
+done

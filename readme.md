@@ -1,0 +1,3 @@
+This is just some tests for checking a compiler's [ISO 10206](https://www.iso.org/obp/ui/#iso:std:iso-iec:10206:ed-1:v1:en) support.  It's intended to help check the correctness of [Free Pascal](https://www.freepascal.org/)'s [upcoming ISO 10206 support](http://wiki.freepascal.org/Extended_Pascal).  It includes shell scripts to build the files for both Free Pascal and [GNU Pascal](http://gnu-pascal.de/) (on Unix-like systems; on other systems, they'll have to be adapted).  GNU Pascal has excellent standards support, so that can stand as a reference.
+
+As of 2017-10-12, there are 36 tests.  GNU Pascal passes all 36.  Free Pascal (versions 2.6.4, 3.0.2, and 3.1.1 tested) passes 3 and fails 33.
