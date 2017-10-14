@@ -1,4 +1,4 @@
-program ISOFile;
+program ISOFile(f, output);
 
 var
   b: BindingType;

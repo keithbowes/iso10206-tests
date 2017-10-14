@@ -1,4 +1,4 @@
-program BoolOps;
+program BoolOps(output);
 
 begin
   WriteLn(true and_then not false);

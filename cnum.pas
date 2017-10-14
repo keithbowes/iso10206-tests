@@ -1,4 +1,4 @@
-program CNum;
+program CNum(output);
 
 var
   c: Complex;

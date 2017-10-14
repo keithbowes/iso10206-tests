@@ -1,4 +1,4 @@
-program KVal;
+program KVal(output);
 
 var
   i: integer value 3;

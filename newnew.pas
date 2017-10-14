@@ -1,4 +1,4 @@
-program Test;
+program Test(output);
 
 type
   TRec = record
@@ -11,6 +11,7 @@ type
 var
   r: ^TRec;
   t: ^TType;
+
 begin
   New(r, true);
   Writeln(r^.i);

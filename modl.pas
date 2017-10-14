@@ -3,6 +3,9 @@ module Modl;
 export
   modl = (a, protected b, c => d, f);
 
+import
+  StandardOutput;
+
   const
     a = 1;
     c = 3;

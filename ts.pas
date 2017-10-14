@@ -1,4 +1,4 @@
-program TS;
+program TS(output);
 
 var
   t: TimeStamp;

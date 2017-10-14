@@ -1,4 +1,4 @@
-program ArraySlices;
+program ArraySlices(output);
 
 { Won't be necessary once conformant arrays are implemented in FPC }
 {$IFDEF __GPC__}

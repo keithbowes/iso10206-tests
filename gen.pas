@@ -1,4 +1,4 @@
-program Gen;
+program Gen(output);
 
 var
   i: integer;

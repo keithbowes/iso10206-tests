@@ -1,4 +1,4 @@
-program Transfer;
+program Transfer(output);
 
 var
   c: Complex;

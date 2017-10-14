@@ -1,4 +1,4 @@
-program RealOps;
+program RealOps(output);
 
 begin
   WriteLn(3 ** 2);

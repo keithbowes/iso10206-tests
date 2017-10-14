@@ -1,4 +1,4 @@
-program func;
+program func(output);
 
 function f(protected x: String) = s: String;
 begin

@@ -1,4 +1,4 @@
-program StrFun;
+program StrFun(output);
 
 begin
   WriteLn(Index('Hello', 'lo'));

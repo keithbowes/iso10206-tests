@@ -1,4 +1,4 @@
-program NumBase;
+program NumBase(output);
 
 begin
   WriteLn('There are ', 2#10, ' kinds of people');

@@ -1,4 +1,4 @@
-program Dyn;
+program Dyn(output);
 
 procedure p(n, o, p: integer);
 var

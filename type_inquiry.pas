@@ -1,4 +1,4 @@
-program Type_Inquiry;
+program Type_Inquiry(output);
 
 { I originally had b as a second parameter, but GPC failed, saying that a is undefined.
   Though, reading the standard, it seems that that should be allowed. }

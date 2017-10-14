@@ -1,4 +1,4 @@
-program SetOps;
+program SetOps(output);
 
 var
   c: char;

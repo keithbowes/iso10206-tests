@@ -1,4 +1,4 @@
-program FileProc;
+program FileProc(f, output);
 
 var
   b: BindingType;

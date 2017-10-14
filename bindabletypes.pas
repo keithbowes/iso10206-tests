@@ -1,4 +1,4 @@
-program BindableTypes;
+program BindableTypes(f);
 
 var
   f: bindable text;

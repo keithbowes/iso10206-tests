@@ -1,4 +1,4 @@
-program EpGoto;
+program EpGoto(output);
 
 label lend;
 

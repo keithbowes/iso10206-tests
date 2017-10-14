@@ -1,4 +1,4 @@
-program ValueConstructors;
+program ValueConstructors(output);
 
 type
   TMyRec = record
