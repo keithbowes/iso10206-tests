@@ -7,11 +7,9 @@ program ArraySlices;
 
 type
   ArrayType = array[1..5] of integer;
-  SubArrayType = array[1..2] of integer;
 
 var
-  a, b: ArrayType;
-  c: SubArrayType;
+  a: ArrayType;
   i: integer;
 
 procedure p(x: array{$IFDEF HAS_CONFORMANT_ARRAYS}[l..h: integer]{$ENDIF} of integer);
