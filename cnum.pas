@@ -5,6 +5,5 @@ var
 
 begin
   c := Cmplx(2, 3);
-  WriteLn(Im(c));
-  WriteLn(Re(c));
+  WriteLn(Re(c):1:0, '+', Im(c):1:0, 'i');
 end.
