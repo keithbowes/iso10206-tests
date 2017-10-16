@@ -1,4 +1,4 @@
-program Arith(output);
+program Complex_Numbers(output);
 
 var
   c: Complex;
