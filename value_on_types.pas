@@ -1,4 +1,4 @@
-program KVal_a(output);
+program Value_on_Types(output);
 
 type
   Number = integer value 3;

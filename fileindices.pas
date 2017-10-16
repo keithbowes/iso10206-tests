@@ -1,4 +1,4 @@
-program IndexFile(f);
+program FileIndices(f);
 
 var
   b: BindingType;

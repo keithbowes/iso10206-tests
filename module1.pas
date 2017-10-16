@@ -1,7 +1,7 @@
-module Modl;
+module Module1;
 
 export
-  modl = (a, protected b, c => d, f);
+  module1 = (a, protected b, c => d, f);
 
 import
   StandardOutput;

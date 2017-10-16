@@ -1,4 +1,4 @@
-module mods implementation;
+module split_module implementation;
 
 import
   StandardOutput;

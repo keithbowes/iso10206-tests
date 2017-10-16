@@ -1,4 +1,4 @@
-program RealOps(output);
+program Exponents(output);
 
 begin
   WriteLn(3 ** 2);

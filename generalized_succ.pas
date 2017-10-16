@@ -1,4 +1,4 @@
-program Gen(output);
+program Generalized_Succ(output);
 
 var
   i: integer;

@@ -1,4 +1,4 @@
-program FileProc(f, output);
+program File_Routines(f, output);
 
 type
   TFileString = packed array[1..80] of char;

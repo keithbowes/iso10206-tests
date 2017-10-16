@@ -1,4 +1,4 @@
-program SchemString(output);
+program SchemaStrings(output);
 
 var
   s: String(20);

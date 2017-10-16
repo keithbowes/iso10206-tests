@@ -1,4 +1,4 @@
-program KVal_Array(output);
+program Value_on_Arrays(output);
 
 type
   MyArray = array[1..3] of integer value [1..2: 3; 3: 5];

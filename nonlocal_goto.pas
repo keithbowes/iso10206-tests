@@ -1,4 +1,4 @@
-program EpGoto(output);
+program Nonlocal_Goto(output);
 
 label lend;
 

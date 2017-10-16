@@ -7,7 +7,7 @@
 {$MODE extendedpascal}
 {$ENDIF}
 
-program NewCase(output);
+program Otherwise_Test(output);
 
 var
   i: integer;

@@ -1,4 +1,4 @@
-program Test;
+program Restricted_Protected;
 
 type
   MyRealType = packed record

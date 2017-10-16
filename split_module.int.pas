@@ -1,4 +1,4 @@
-module mods interface;
+module split_module interface;
 
 export
   mods = (f);

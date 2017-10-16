@@ -1,4 +1,4 @@
-program Dyn(output);
+program Dynamic_Variables(output);
 
 procedure p(n, o, p: integer);
 var

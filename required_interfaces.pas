@@ -1,4 +1,4 @@
-program IO;
+program Required_Interfaces;
 
 import
   StandardInput;

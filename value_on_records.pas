@@ -1,4 +1,4 @@
-program KVal_Record(output);
+program Value_on_Records(output);
 
 type
   TMyRec = record

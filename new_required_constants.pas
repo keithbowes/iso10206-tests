@@ -1,4 +1,4 @@
-program NewConsts(output);
+program New_Required_Constants(output);
 
 begin
   WriteLn(epsreal);

@@ -1,4 +1,4 @@
-program BoolOps(output);
+program Boolean_Operators(output);
 
 begin
   WriteLn(true and_then not false);

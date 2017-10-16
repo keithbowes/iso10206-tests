@@ -1,4 +1,4 @@
-program Schema(output);
+program Schemas(output);
 
 type
   MySchema(n: integer) = array[0..n-1] of integer;

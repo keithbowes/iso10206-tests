@@ -1,4 +1,4 @@
-program Test(output);
+program New_with_Discriminants(output);
 
 type
   TRec = record

@@ -1,4 +1,4 @@
-program ConfArr(output);
+program Conformant_Arrays(output);
 
 procedure a(x: array[l..h: integer] of integer);
 var

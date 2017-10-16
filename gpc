@@ -6,8 +6,8 @@ rm -fr gpc-build
 mkdir gpc-build
 cd gpc-build
 
-# mods.int.pas has to be compiled before mods.imp.pas for mods.imp.pas to successfully compile
-for f in ../mods.int.pas `find .. -name '*.pas' -a ! -path '../mods.int.pas'`;
+# split_module.int.pas has to be compiled before split_module.imp.pas for split_module.imp.pas to successfully compile
+for f in ../split_module.int.pas `find .. -name '*.pas' -a ! -path '../split_module.int.pas'`;
 do
     out=`echo $f|sed -e 's/^\.\.\/\(.\+\)\.pas$/\1/g'`
     # Try to compile

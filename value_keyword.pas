@@ -1,4 +1,4 @@
-program KVal(output);
+program Val_Keyword(output);
 
 var
   i: integer value 3;
