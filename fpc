@@ -15,7 +15,8 @@ do
         for mode in fpc extendedpascal iso;
         do
             $fpc -FE. -FU. -M$mode $f
-            if test "$?" == "0";
+            err=$?
+            if test "$err" == "0";
             then
                 version=`echo $fpc | grep -Po '\d+\.\d+\.\d+'`
                 echo "$f ($version, $mode)" >> success
@@ -24,5 +25,8 @@ do
         done
     done
 
-    echo "$f" >> failure
+    if test "$err" != "0";
+    then
+        echo "$f" >> failure
+    fi
 done
