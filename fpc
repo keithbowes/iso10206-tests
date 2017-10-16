@@ -12,6 +12,10 @@ do
     # *nix only at the moment
     for fpc in /usr/lib/fpc/*/ppc*;
     do
+        # Try to do most things in default mode
+        # Go for EP next, for things not implemented in default mode
+        # ISO should be last (and only for versions without an EP mode)
+        # Primarily to see the lowest version that can handle these things, and in which mode
         for mode in fpc extendedpascal iso;
         do
             $fpc -FE. -FU. -M$mode $f
