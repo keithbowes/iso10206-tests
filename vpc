@@ -9,18 +9,17 @@ cd vpc-build
 vpc=$(which vpc)
 export mmpcdir=$(dirname $vpc)/$(dirname `readlink $vpc`)
 
-# mods.int.pas has to be compiled before mods.imp.pas for mods.imp.pas to successfully compile
 for f in ../*.pas;
 do
     out=`echo $f | sed -e 's/^..\/\(.\+\)\.pas$/\1/g'`
-    vpc $f
+    $mmpcdir/vpc $f
     if test "$?" == "0";
     then
         echo "$f" >> success
     else
         # If it was a module or unit, linking will have failed
         # Let's try again without linking
-        vpc $f -nolink
+        $mmpcdir/vpc $f -nolink
         if test "$?" == "0";
         then
             echo "$f" >> success

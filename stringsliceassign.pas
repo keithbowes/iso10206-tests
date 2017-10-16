@@ -6,5 +6,5 @@ var
 begin
   s := 'Himlo';
   s[2..3] := 'el';
-  WriteLn(s);
+  WriteLn(s); { Hello }
 end.

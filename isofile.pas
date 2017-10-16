@@ -13,7 +13,7 @@ begin
   end
   else
   begin
-    WriteLn('File couldn''t be bound');
+    WriteLn('File ', Binding(f).Name, ' couldn''t be bound');
   end;
   Unbind(f);
 end.

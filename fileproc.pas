@@ -1,24 +1,32 @@
 program FileProc(f, output);
 
+type
+  TFileString = packed array[1..80] of char;
+
 var
   b: BindingType;
-  f: file of array[1..80] of char;
+  f: file of TFileString;
+  s: TFileString;
 
 begin
   b.Name := 'foo';
   Bind(f, b);
   if Binding(f).Bound then
   begin
-    Extend(f);
-    WriteLn(Empty(f));
+    Rewrite(f);
+    WriteLn('Is the file empty: ', Empty(f));
     Write(f, 'New line');
-    Update(f);
-    SeekRead(f, 3);
-    SeekWrite(f, 5);
+    SeekUpdate(f, 1);
     Write(f, 'New Text');
-    SeekUpdate(f, 14);
-    WriteLn(Position(f));
-    WriteLn(LastPosition(f));
+    Reset(f);
+    SeekRead(f, 0);
+    while not Eof(f) do
+    begin
+      Read(f, s);
+      WriteLn('Reading line from the file: ', s);
+    end;
+    WriteLn('Position: ', Position(f));
+    WriteLn('LastPosition: ', LastPosition(f));
   end;
   Unbind(f);
 end.
