@@ -6,11 +6,16 @@ rm -fr fpc-build
 mkdir fpc-build
 cd fpc-build
 
+if test -z "$FPC";
+then
+    FPC="/usr/lib/fpc/*/ppc*"
+fi
+
 for f in ../*.pas;
 do
     # Try with different versions and modes until something works
     # *nix only at the moment
-    for fpc in /usr/lib/fpc/*/ppc*;
+    for fpc in $FPC;
     do
         # Try to do most things in default mode
         # Go for EP next, for things not implemented in default mode
@@ -23,6 +28,10 @@ do
             if test "$err" == "0";
             then
                 version=`echo $fpc | grep -Po '\d+\.\d+\.\d+'`
+                if test -z "$version";
+                then
+                    version=$($fpc -iV)
+                fi
                 echo "$f ($version, $mode)" >> success
                 break 2;
             fi
