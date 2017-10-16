@@ -20,4 +20,6 @@ begin
   print_complex(Sin(c));
   print_complex(Sqr(c));
   print_complex(Sqrt(c));
+  WriteLn;
+  print_complex(Polar(2, 3));
 end.
