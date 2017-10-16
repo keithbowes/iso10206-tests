@@ -30,7 +30,7 @@ begin
   CopyFrom(f1, f2);
   Reset(f2);
   repeat
-    Read(f2, i);
-    WriteLn('Reading ', i, ' from the copied file');
+    WriteLn('Reading ', f2^, ' from the copied file');
+    Get(f2);
   until Eof(f2);
 end.
