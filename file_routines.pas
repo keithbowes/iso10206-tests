@@ -18,7 +18,6 @@ begin
     Write(f, 'New line');
     SeekUpdate(f, 1);
     Write(f, 'New Text');
-    Reset(f);
     SeekRead(f, 0);
     while not Eof(f) do
     begin

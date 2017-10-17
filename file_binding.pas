@@ -5,7 +5,7 @@ var
   f: text;
 
 begin
-  b.Name := 'isofile.pas';
+  b.Name := 'file_binding.pas';
   Bind(f, b);
   if Binding(f).Bound then
   begin
