@@ -9,6 +9,7 @@ var
   s: TFileString;
 
 begin
+  b := Binding(f);
   b.Name := 'foo';
   Bind(f, b);
   if Binding(f).Bound then

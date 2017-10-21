@@ -2,7 +2,7 @@ program PageTest(output);
 
 var
   f: text;
-  s: array[1..256] of char;
+  s: packed array[1..256] of char;
 
 begin
   Rewrite(f);

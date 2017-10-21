@@ -6,13 +6,12 @@ program ArraySlices(output);
 {$ENDIF}
 
 type
-  ArrayType = array[1..5] of integer;
+  ArrayType = packed array[1..5] of char;
 
 var
   a: ArrayType;
-  i: integer;
 
-procedure p(x: array{$IFDEF HAS_CONFORMANT_ARRAYS}[l..h: integer]{$ENDIF} of integer);
+procedure p(x: packed array{$IFDEF HAS_CONFORMANT_ARRAYS}[l..h: integer]{$ENDIF} of char);
 begin
   {$IFDEF HAS_CONFORMANT_ARRAYS}
   WriteLn(x[l], ':', x[h]); { Should be 2:3 }
@@ -22,9 +21,6 @@ begin
 end;
 
 begin
-  for i := 1 to 5 do
-  begin
-    a[i] := i;
-  end;
+  a := '12345';
   p(a[2..3]);
 end.

@@ -2,8 +2,8 @@ program Value_on_Arrays(output);
 
 type
   MyArray = array[1..3] of integer value [1..2: 3; 3: 5];
-  MyStrArray = array[1..3] of char value '*';
-  MyStrArray2 = array[1..3] of char value [1..3: '*'];
+  MyStrArray = packed array[1..3] of char value '*';
+  MyStrArray2 = packed array[1..3] of char value [1..3: '*'];
 
 var
   ma: MyArray;

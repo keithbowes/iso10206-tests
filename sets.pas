@@ -2,8 +2,8 @@ program Sets(output);
 
 var
   c: char;
-  s1: set of char = ['a', 'b', 'c', 'd'];
-  s2: set of char = ['b', 'd'];
+  s1: set of char value ['a', 'b', 'c', 'd'];
+  s2: set of char value ['b', 'd'];
   s3: set of char;
 
 begin

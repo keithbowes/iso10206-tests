@@ -1,16 +1,16 @@
 program Nonlocal_Goto(output);
 
-label lend;
+label 2;
 
 procedure p;
 begin
-  goto lend;
+  goto 2;
   WriteLn('You shouldn''t see this');
 end;
 
 begin
-  lend:
+  2:
   begin
-    Halt(2);
+    WriteLn('Correctly made it to extraprocedural label 2');
   end;
 end.
