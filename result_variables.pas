@@ -1,8 +1,8 @@
 program Result_Variables(output);
 
-function f(protected x: String) = s: String;
+function f(protected x: String) = i: integer;
 begin
-  s := x;
+  i := Length(x);
 end;
 
 begin
