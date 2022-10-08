@@ -28,6 +28,7 @@ begin
 end;
 
 begin
+  p;
   2:
   begin
     WriteLn('Correctly made it to extraprocedural label 2');
