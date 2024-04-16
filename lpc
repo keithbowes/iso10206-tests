@@ -1,0 +1,33 @@
+#! /bin/sh
+
+# Run the tests with FPC
+rm -fr lpc-build
+mkdir lpc-build
+cd lpc-build
+
+if test -z "$FPC";
+then
+    LPC="../../lacsap/lacsap"
+fi
+
+pc=$LPC
+for f in ../*.pas;
+do
+    # Try with different versions and modes until something works
+    # *nix only at the moment
+    $pc $f
+    err=$?
+    if test "$err" = "0";
+    then
+        echo "$f" >> success
+    fi
+
+    if test "$err" != "0";
+    then
+        echo "$f" >> failure 
+    fi
+done
+echo failures:
+wc -l failure
+echo successes:
+wc -l success

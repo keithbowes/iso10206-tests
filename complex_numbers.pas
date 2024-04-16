@@ -27,12 +27,17 @@ begin
   WriteLn(Re(x):1:3, '+', Im(x):1:3, 'i');
 end;
 
+procedure print_real(x: real);
+begin
+   WriteLn(x:1:3);
+end;
+
 begin
   c := Cmplx(2, 3);
   print_complex(c);
-  print_complex(Abs(c));
+  print_real(Abs(c));
   print_complex(Arctan(c));
-  print_complex(Arg(c));
+  print_real(Arg(c));
   print_complex(Cos(c));
   print_complex(Exp(c));
   print_complex(Ln(c));

@@ -1,3 +1,8 @@
+# These two lines makes us ignore executable files.
+*	# Ignore ALL files.
+!*.*	# Allow those that have an extension
 fpc-build
 gpc-build
 vpc-build
+lpc-build
+*.o
